@@ -1,0 +1,53 @@
+.btn{
+    transition: $transition;
+    background-color: $color-white;
+    padding: 11px 20px;
+    border: 1px solid;
+    &__primary{
+        border-radius: 14px;
+        color: $color-black;
+        border-color: $color-white;
+        padding: 11px 20px;
+        &:hover{
+            background-color: $color-black;
+            border-color: $color-white;
+            color: $color-white;
+        }
+    }
+    &__second{
+        border-radius: 14px;
+        color: $color-black;
+        border-color: $color-white;
+        padding: 11px 20px;
+        max-width: 131px;
+        &:hover{
+            background-color: $color-black;
+            border-color: $color-white;
+            color: $color-white;
+        }
+    }
+    &__third{
+        font-weight: 500;
+        border-radius: 14px;
+        color: $color-black;
+        border-color: $color-white;
+        padding: 11px 20px;
+        max-width: 140px;
+        &:hover{
+            background-color: $color-black;
+            border-color: $color-white;
+            color: $color-white;
+        }
+    }
+}
+
+.input{
+    padding: 5px 50px;
+    border: none;
+    border-radius: 12px 0px 0px 12px;
+    outline: none;
+    @include Small-480-PcScreen{
+        max-width: 110px;
+        padding: 5px 30px;
+    }
+}

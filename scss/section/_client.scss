@@ -1,0 +1,47 @@
+.client{
+    background-color: #000;
+    &__wrapper{
+        @include flex-column;
+        justify-content: center;
+        align-items: center;
+        padding-top: 120px;
+        padding-bottom: 100px;
+        gap: 82px;
+        @include Small-480-PcScreen{
+            padding: 120px $padding-container;
+        }
+    }
+    &__text{
+        color: $color-white;
+        @include flex-column;
+        gap: 15px;
+        align-items: center;
+        &-h2{
+            font-size: 40px;
+        }
+        &-p{
+            text-align: center;
+            font-size: 24px;
+            color: $color-gray;
+        }
+    }
+    &__img{
+        @include flex-row;
+        gap: 110px;
+        &-item{
+            object-fit: contain;
+        }
+        @include Small-1240-PcScreen{
+            gap: 50px;
+        }
+        @include Small-1000-PcScreen{
+            display: grid;
+            grid-template-columns: 100px 100px;
+            gap: 150px;
+        }
+        @include Small-640-PcScreen{
+            grid-template-columns: 140px;
+            gap: 60px;
+        }
+    }
+}

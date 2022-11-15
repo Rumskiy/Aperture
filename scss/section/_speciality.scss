@@ -1,0 +1,114 @@
+.speciality{
+    background-color: black;
+    &__container{
+        margin: 0 auto;
+        padding: 0px 140px;
+    }
+    &__wrapper{
+        padding: 100px 0px;
+        @include flex-column;
+        align-items: center;
+        gap: 40px;
+        
+    }
+    &__text{
+        @include flex-column;
+        gap: 15px;
+        align-items: center;
+        justify-content: center;
+        &-h1{
+            color: $color-white;
+            font-size: 40px;
+        }
+        &-p{
+            text-align: left;
+            color: $color-white;
+            font-size: 24px;
+            font-weight: 300;
+        }
+    }
+    &__items{
+        display: grid;
+        grid-template-columns: 576px 576px;
+        @include Small-1240-PcScreen{
+            gap: 15px;
+            grid-template-columns: 450px 450px;
+        }
+        @include Small-1000-PcScreen{
+            grid-template-columns: 576px;
+        }
+        @include Small-640-PcScreen{
+            grid-template-columns: 400px;
+        }
+        @include Small-480-PcScreen{
+            grid-template-columns: 300px;
+        }
+        @include Small-320-PcScreen{
+            grid-template-columns: 250px;
+        }
+        gap: 50px;
+        color: $color-white;
+    }
+    &__item{
+        &-first{
+            background-image: url(../img/compress/pic-1.webp);
+            background-blend-mode: multiply;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 600px;
+            @include flex-column;
+            gap: 20px;
+            justify-content: flex-end;
+            padding: 30px 30px;
+        }
+        &-second{
+            background-image: url(../img/compress/pic-2.webp);
+            background-blend-mode: multiply;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 600px;
+            @include flex-column;
+            gap: 20px;
+            justify-content: flex-end;
+            padding: 30px 30px;
+        }
+        &-third{
+            background-image: url(../img/compress/pic-3.webp);
+            background-blend-mode: multiply;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 600px;
+            @include flex-column;
+            gap: 20px;
+            justify-content: flex-end;
+            padding: 30px 30px;
+        }
+        &-fourth{
+            background-image: url(../img/compress/pic-4.webp);
+            background-blend-mode: multiply;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover; 
+            height: 600px;
+            @include flex-column;
+            gap: 20px;
+            justify-content: flex-end;
+            padding: 30px 30px;
+        }
+        &-h2{
+            font-size: 18px;
+            font-weight: 400;
+            color: $color-gray;
+            
+        }
+        &-p{
+            font-size: 14px;
+            font-weight: 400;
+            color: $color-gray;
+            text-align: left;
+        }
+    }
+}

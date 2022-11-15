@@ -1,0 +1,85 @@
+.cage{
+    background-color: #000;
+    @include flex-row;
+    justify-content: space-between;
+    @include Small-480-PcScreen{
+        @include flex-column;
+    }
+    &__wrapper{
+        color: $color-white;
+        @include flex-column;
+        justify-content: center;
+        padding-left: 110px;
+        @include Small-1240-PcScreen{
+            padding-left: 60px;
+        }
+        @include Small-480-PcScreen{
+            padding: 50px $padding-container;
+            align-items: left;
+        }
+    }
+    &__cage{
+        font-size: 28px;
+    }
+    &__p{
+        &-first{
+            font-weight: 400;
+            font-size: 14px;
+            padding-bottom: 10px;
+            color: $color-gray;
+            text-align: left;
+        }
+        &-main{
+            max-width: 515px;
+            padding-top: 15px;
+            padding-bottom: 20px;
+            
+            @include Small-1000-PcScreen{
+                max-width: 400px;
+                text-align: left;
+                padding-right: 15px;
+            }
+            @include Small-900-PcScreen{
+                max-width: 300px;
+                padding-right: 30px;
+            }
+        }
+    }
+    &__items{
+        background-image: url(../img/compress/section-3.png);
+        background-blend-mode: multiply;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+        width: 50%;
+        max-height: 100vh;
+        height: 540px;
+        @include flex-row;
+        justify-content: end;
+        padding-bottom: 45px;
+        padding-right: 40px;
+        @include Small-480-PcScreen{
+            width: 100%;
+        }
+        &-svgs{
+            color: $color-white;
+            @include flex-row;
+            justify-content: end;
+            gap: 20px;
+            align-items: flex-end;
+            @include Small-900-PcScreen{
+                gap: 6px
+            }
+            @include Small-640-PcScreen{
+                @include flex-column
+            }
+            
+            &-li{
+                @include flex-row;
+                align-items: center;
+                gap: 5px;
+                }
+        }
+    }
+}

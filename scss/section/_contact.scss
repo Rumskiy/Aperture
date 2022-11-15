@@ -1,0 +1,25 @@
+.contact{
+    background-color: #000;
+    &__wrapper{
+        @include flex-column;
+        padding: 120px 0px;
+        align-items: center;
+        gap: 20px;
+    }
+    &__h2{
+        @include Small-480-PcScreen{
+            font-size: 24px;
+        }
+        color: $color-white;
+        font-size: 45px;
+        max-width: 650px;
+        text-align: center;
+    }
+    &__p{
+        @include Small-480-PcScreen{
+            font-size: 14px;
+        }
+        color: $color-gray;
+        font-size: 24px;
+    }
+}

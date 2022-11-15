@@ -1,0 +1,103 @@
+.footer{
+    background-color: black;
+    &__hr{
+        height: 2px;
+        color: $color-white;
+    }
+    &__wrapper{
+        padding: 100px 0px;
+        color: $color-white;
+        
+    }
+    &__items{
+        @include flex-row;
+        justify-content: space-around;
+        padding-bottom: 35px;
+        @include Small-640-PcScreen{
+            gap: 30px;
+            @include flex-column;
+        }
+        &-first{
+            @include flex-column;
+            gap: 20px;
+            &-p{
+                color: $color-gray;
+                font-size: 13px;
+            }
+        }
+        &-second{
+            padding-left: 180px;
+            @include flex-column;
+            gap: 10px;
+            @include Small-640-PcScreen{
+                padding: 0px;
+            }
+        }
+        
+        &-h3{
+            color: $color-gray;
+            font-size: 20px;
+            font-weight: 200;
+        }
+        &-list{
+            @include flex-column;
+            gap: 5px;
+        }
+    }
+    &__link{
+        @include Small-640-PcScreen{
+            gap: 30px;
+            @include flex-column;
+        }
+        @include flex-row;
+        padding: 40px 0px;
+        justify-content: space-between;
+        align-items: center;
+        &__h2{
+            font-size: 24px;
+            font-weight: 200;
+        }
+        &__p{
+            font-size: 12px;
+            font-weight: 300;
+        }
+        &__text{
+            @include flex-column;
+            gap: 30px;
+        }
+        &__input{
+            border-radius: 12px;
+            background-color: $color-white;
+            display: flex;
+            padding: 10px;
+            overflow: hidden;
+            @include Small-480-PcScreen{
+                max-width: 200px
+            }
+        }
+        &__btn{
+            background-color: #000;
+            color: $color-white;
+            border: none;
+            border-radius: 12px;
+            padding: 10px 10px;
+            
+        }
+    }
+    &__under{
+        @include Small-640-PcScreen{
+            @include flex-column;
+            gap: 30px;
+        }
+        padding-top: 50px;
+        @include flex-row;
+        justify-content: space-between;
+        &-p{
+            color: $color-gray;
+        }
+        &-items{
+            @include flex-row;
+            gap: 20px;
+        }
+    }
+}
